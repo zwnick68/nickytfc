@@ -1,0 +1,67 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  ranking: MyString
+  record: MyString
+  age: MyString
+  height: MyString
+  weight: MyString
+  octagon_debut: MyString
+  reach: MyString
+  leg_reach: MyString
+  strAcc: MyString
+  grpAcc: MyString
+  slpm: MyString
+  sabpm: MyString
+  tdAvg: MyString
+  subAvg: MyString
+  strDef: MyString
+  tdDef: MyString
+  knockdown_ratio: MyString
+  avgFt: MyString
+  ssbPS: MyString
+  ssbPC: MyString
+  ssbPG: MyString
+  wbwKO: MyString
+  wbwDec: MyString
+  wbwSub: MyString
+  ssbTH: MyString
+  ssbTB: MyString
+  ssbTL: MyString
+  img: MyString
+  weightclass_id: MyString
+  promotion_id: MyString
+
+two:
+  name: MyString
+  ranking: MyString
+  record: MyString
+  age: MyString
+  height: MyString
+  weight: MyString
+  octagon_debut: MyString
+  reach: MyString
+  leg_reach: MyString
+  strAcc: MyString
+  grpAcc: MyString
+  slpm: MyString
+  sabpm: MyString
+  tdAvg: MyString
+  subAvg: MyString
+  strDef: MyString
+  tdDef: MyString
+  knockdown_ratio: MyString
+  avgFt: MyString
+  ssbPS: MyString
+  ssbPC: MyString
+  ssbPG: MyString
+  wbwKO: MyString
+  wbwDec: MyString
+  wbwSub: MyString
+  ssbTH: MyString
+  ssbTB: MyString
+  ssbTL: MyString
+  img: MyString
+  weightclass_id: MyString
+  promotion_id: MyString
