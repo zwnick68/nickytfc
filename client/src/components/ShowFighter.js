@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 function ShowFighter ({fighterName,fighterImage, fighterRanking, fighter_record, fighterAge, fighterHeight, fighterWeight, fighterReach,fighterNickName}) {
-
+    
     return(
     <div>
         <h1 style={{color: "white", fontSize: "18px"}}>{fighterName}</h1>
@@ -12,6 +12,8 @@ function ShowFighter ({fighterName,fighterImage, fighterRanking, fighter_record,
         <h2 style={{color: "white", fontSize: "12px"}}>Height: {fighterHeight} in</h2>
         <h2 style={{color: "white", fontSize: "12px"}}>Weight: {fighterWeight} lbs</h2>
         <h2 style={{color: "white", fontSize: "12px"}}>Reach: {fighterReach} </h2>
+        <button>Delete</button>
+        <button>Update</button>
     </div>
     )
 }
