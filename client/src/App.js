@@ -12,7 +12,7 @@ import './App.css';
 function App() {
 
   const [data, setData] = useState([])
-  const [user, setUser] = useState(null);
+  
 
   let request= async()=>{
     let req = await fetch('/fighters')
@@ -25,13 +25,7 @@ function App() {
     }, [])
 
 
-    function handleLogin(user) {
-      setUser(user);
-    }
-  
-    function handleLogout() {
-      setUser(null);
-    }
+    
   
 
   return (

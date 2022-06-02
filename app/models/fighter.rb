@@ -1,4 +1,4 @@
 class Fighter < ApplicationRecord
-    belongs_to :promotion
-    belongs_to :weightclass
+    # belongs_to :promotion
+    # belongs_to :weightclass
 end
