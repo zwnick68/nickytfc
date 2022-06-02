@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+.nav {
+ 
+  margin-right: 20px;
+  font-size: 35px;
+  background-image: gray;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+ 
+}
+
+.topdiv {
+  color: rgb(10, 10, 10);
+  font-size: 22px;
+  font-family: 'Trebuchet MS';
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
