@@ -4,12 +4,15 @@ import CreateFighter from './components/CreateFighter';
 import Nav from './components/Nav';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import HomePage from './components/HomePage';
+import Login from './components/Login';
+
 import './App.css';
 
 
 function App() {
 
-  const [data, setData]=useState([])
+  const [data, setData] = useState([])
+  const [user, setUser] = useState(null);
 
   let request= async()=>{
     let req = await fetch('/fighters')
@@ -20,6 +23,15 @@ function App() {
     useEffect(() => {
       request()
     }, [])
+
+
+    function handleLogin(user) {
+      setUser(user);
+    }
+  
+    function handleLogout() {
+      setUser(null);
+    }
   
 
   return (
@@ -36,8 +48,9 @@ function App() {
           <FighterContainer fighters={data} />
        </Route>
      <Route exact path="/create"> 
-          <CreateFighter setData= {setData} />
+          <CreateFighter  />
      </Route>
+     
     </Switch>
 
    
