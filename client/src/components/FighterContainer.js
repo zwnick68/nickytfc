@@ -3,10 +3,10 @@ import React from "react";
 import Fighter from "./Fighter.js"
 function FighterContainer ({fighters}) {
     return (
-        <div>
+        <div className="fighter-container">
     {
         fighters.map((element) => {
-            return <Fighter fighter={element}  /> 
+            return <Fighter key={element.id} fighter={element}  /> 
         })
      
     }    

@@ -56,3 +56,34 @@
   margin-top: 16px;
   margin-bottom: 12px;
 }
+
+.fighter-container{
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(4, 170px);
+  grid-gap: 1rem;
+  margin-left: 350px;
+  margin-right: 230px;
+  margin-bottom: 50px;
+}
+
+.fighter-item{
+  width: 10rem;
+  height: 15rem;
+  background: black;
+  color: white;
+  font-size: 9px;
+  padding: 30px;
+}
+
+.fighter-item:hover{
+  cursor: pointer;
+  box-shadow: 0 0.5rem 0.5rem 0.5rem #B20600;
+}
+
+.fighter-img{
+   width: 9rem;
+   height: 2fr;
+   margin-top: 5px;
+   margin-bottom: 5px;
+}
