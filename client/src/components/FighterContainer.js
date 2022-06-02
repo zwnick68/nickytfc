@@ -6,7 +6,7 @@ function FighterContainer ({fighters}) {
         <div>
     {
         fighters.map((element) => {
-            return <Fighter fight={element}  /> 
+            return <Fighter fighter={element}  /> 
         })
      
     }    
