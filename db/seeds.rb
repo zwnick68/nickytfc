@@ -3,6 +3,10 @@ balls.each do |record|
     Fighter.create!(record)
 end
 
+Promotion.create(name: "UFC")
+Weightclass.create(name: "Bantamweight", weight: 135)
+
+puts "done seedings broi"
 # Fighter.create(
 #     nickname: "Funk Master",
 #     name: "Aljamain Sterling",
