@@ -14,7 +14,7 @@ function App() {
   let request= async()=>{
     let req = await fetch('/fighters')
     let res = await req.json()
-      setData(res.results)
+      setData(res)
     }
     
     useEffect(() => {
