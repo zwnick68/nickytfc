@@ -3,10 +3,11 @@ import React, { Component, useState }  from 'react';
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errors,setErrors] = useState([])
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/sessions", {
+    fetch("/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -16,10 +17,14 @@ function Login({ onLogin }) {
       if (r.ok) {
         r.json().then((user) => onLogin(user));
       }
+      else {
+        r.json().then((err) => setErrors(err.errors));
+      }
     });
   }
 
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <h3>Login With Username and Password</h3>
       <label htmlFor="username">Username: </label>
@@ -39,6 +44,9 @@ function Login({ onLogin }) {
       
       <button type="submit">Login</button>
     </form>
+  {errors}
+  
+</>
   );
 }
 

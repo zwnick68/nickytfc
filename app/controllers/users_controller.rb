@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 # rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
-skip_before_action :authorized, only: [:show]
+# skip_before_action :authorized, only: [:show]
 
     def show
         user = User.find_by(id: session[:user_id])
@@ -14,7 +14,8 @@ skip_before_action :authorized, only: [:show]
       def create
         user = User.create(user_params)
         if user.valid?
-          render json: user, status: :created
+          user.save
+          redirect_to('/fighters')
         else
           render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
         end

@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router-dom";
 
 function SignUp({ setUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [errors,setErrors] = useState("")
 
   function handleSubmit(e) {
+    // <Redirect to="/fighters" />
     e.preventDefault();
-    fetch("/users", {
+    fetch("/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -21,7 +24,11 @@ function SignUp({ setUser }) {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
+      else {
+        r.json().then((err) => setErrors(err.errors));
+      }
     });
+    
   }
 
   return (
