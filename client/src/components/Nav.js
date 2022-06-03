@@ -22,9 +22,10 @@ function Nav() {
             Create A Fighter
           </NavLink>
 
-          <NavLink className="nav" to="/about"> 
+          <NavLink className="nav" to="/vspage"> 
             VS Page
           </NavLink>
+        
 
          
 

@@ -88,3 +88,42 @@
    margin-top: 5px;
    margin-bottom: 5px;
 }
+
+
+.vscontainer{
+  align-self: center;
+  height: 25px;
+  display: grid;
+  grid-template-columns: repeat(8, 85px);
+  grid-gap: 1rem;
+  margin-left: 320px;
+  margin-right: 230px;
+  margin-bottom: 50px;
+}
+
+.fighter-item2{
+  width: 5rem;
+  height:6rem;
+  color: red;
+  font-size: 9px;
+  padding: 11px;
+  
+}
+
+
+
+.fighter-img2{
+  background: black;
+
+   width: 6rem;
+   height: 2fr;
+   margin-top: 5px;
+   margin-bottom: 5px;
+}
+
+.fighter-img2:hover{
+  cursor: pointer;
+  box-shadow: 0 1rem 1rem 1rem #B20600;
+  opacity: 50%;
+}
+

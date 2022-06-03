@@ -7,6 +7,7 @@ import HomePage from './components/HomePage';
 import Login from './components/Login';
 
 import './App.css';
+import VsPage from './components/VsPage';
 
 
 function App() {
@@ -49,6 +50,9 @@ function App() {
        </Route>
      <Route exact path="/create"> 
           <CreateFighter  />
+     </Route>
+     <Route exact path="/vspage"> 
+          <VsPage  />
      </Route>
      
     </Switch>
