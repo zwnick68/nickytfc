@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   resources :promotions
   resources :fighters
   resources :users
-  resources :sessions
+  # resources :sessions
 
   post '/login', to: 'sessions#login'
   post '/signup', to: 'users#create'
+  delete '/logout', to: 'sessions#logout'
 end
