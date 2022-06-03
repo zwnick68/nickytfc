@@ -7,6 +7,8 @@ Promotion.create(name: "UFC")
 Weightclass.create(name: "Bantamweight", weight: 135)
 
 User.create(username: "nicky", password: "ye")
+User.create(username: "r", password: "r")
+User.create(username: "d", password: "d")
 
 puts "done seedings broi"
 # Fighter.create(

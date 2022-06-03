@@ -3,7 +3,6 @@ import FighterContainer from './components/FighterContainer';
 import CreateFighter from './components/CreateFighter';
 import Nav from './components/Nav';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import HomePage from './components/HomePage';
 import Login from './components/Login';
 
 import './App.css';
@@ -12,6 +11,7 @@ import './App.css';
 function App() {
 
   const [data, setData] = useState([])
+  const [user, setUser] = useState(null)
   
 
   let request= async()=>{
@@ -24,29 +24,28 @@ function App() {
       request()
     }, [])
 
-
+    // function handleLogin(user) {
+    //     setUser(user);
+    //   }
     
-  
+    //   function handleLogout() {
+    //     setUser(null);
+    //   }
+    
+      if (!user) return <Login onLogin={setUser} />;
 
   return (
     <div className="App">
-     <Nav/>
-     
-     
-    
+     <Nav user= {user} setUser={setUser}/>
     <Switch>
-        <Route exact path="/"> 
-         <HomePage />
-       </Route>
         <Route exact path="/fighters"> 
-          <FighterContainer fighters={data} />
+          <FighterContainer user={user} fighters={data} />
        </Route>
-     <Route exact path="/create"> 
+     <Route exact path="/fighters"> 
           <CreateFighter  />
      </Route>
-     
     </Switch>
-
+    <img className="home-image" src="https://wallpaperaccess.com/full/4487462.jpg" height="800px"/>
    
     </div>
   );
