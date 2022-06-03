@@ -1,6 +1,7 @@
 class FightersController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+    
     def index
         render json: Fighter.all
     end
@@ -18,14 +19,16 @@ class FightersController < ApplicationController
 
     def create
         fighter = Fighter.create!(fighter_params)
-        render json: fighter, status: 201
+        render json: fighter, status: :created
     end
 
     def destroy
-        fighter = fighter_params
+        fighter = find_fighter
         fighter.destroy
         head :no_content
     end
+
+    private
 
     def find_fighter
         Fighter.find(params[:id])
