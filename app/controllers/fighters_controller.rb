@@ -28,7 +28,7 @@ class FightersController < ApplicationController
     end
 
     def find_fighter
-        Fighter.find(params[:id])
+        Fighter.find_by(params[:id])
     end
 
     def fighter_params

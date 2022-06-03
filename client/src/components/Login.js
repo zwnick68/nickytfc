@@ -1,9 +1,9 @@
 import React, { Component, useState }  from 'react';
 import LoginForm from "../components/LoginForm";
 import SignUp from "../components/SignUp";
-function Login({ onLogin }) {
+
+function Login({user, setUser, onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
- 
 
   return (
     <div>

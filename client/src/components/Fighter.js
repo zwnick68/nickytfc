@@ -1,27 +1,37 @@
 import React,{useState,useEffect} from "react";
+// import ShowFighter from "../components/ShowFighter";
+import { NavLink } from 'react-router-dom';
+import ShowFighter from "./ShowFighter";
 
-function Fighter({fighter,setFighterName, setFighterImage, setFighterRanking, setFighter_record,setFighterAge, setFighterHeight, setFighterWeight,setFighterReach, setFighterNickName, setClickFighter}){
+function Fighter({fighter}){
+   const[fighterId,setFighterId] = useState(null)
+console.log(fighter)
 
-   const{id,nickname,name,fight_record,age,img,ranking, height,weight,reach} = fighter
-   const  clickFighter = () => {
-      setFighterName(name)
-      setFighterImage(img)
-      setFighterRanking(ranking)
-      setFighter_record(fight_record)
-      setFighterAge(age)
-      setFighterHeight(height)
-      setFighterWeight(weight)
-      setFighterReach(reach)
-      setFighterNickName(nickname)
-      setClickFighter(true)
-   }
+ const[showFighter,setShowFighters] = useState([])
+   
+const{id,nickname,name,fight_record,age,img,ranking, height,weight,reach} = fighter
+   
+  
+   //    useEffect(() => {
+   //       (async() => {
+   //           let req = await fetch(`/fighters/${fighter.id}`)
+   //           let res = req.json()
+   //          setShowFighters(res)
+   //       })()   
+   //      }, [fighter])
+        
+   // console.log(showFighter)
 
+// if (!showFighter) return <ShowFighter fighter={fighter} />
 return(
-   <div className="fighter-item" onClick={clickFighter}>
+   <NavLink  className="nav" to={`/fighters/${fighter.id}`}>
+      {/* <ShowFighter showFighter={showFighter}/>  */}
+   <div className="fighter-item" >
       <img src={img} class="fighter-img"/>
       <h1> {name} </h1>   
          <h3>Ranking: {ranking}</h3>
     </div>
+     </NavLink>  
 )
 
 }

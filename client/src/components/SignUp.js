@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-
+import Nav from "../components/Nav";
 
 function SignUp({ setUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errors,setErrors] = useState("")
+
+  const [signup, setSignup] = useState(true);
+
+if (!signup) return <Nav onLogin={setUser} />;
 
   function handleSubmit(e) {
     // <Redirect to="/fighters" />

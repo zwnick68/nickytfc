@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useSyncExternalStore} from 'react';
 import FighterContainer from './components/FighterContainer';
 import CreateFighter from './components/CreateFighter';
 import Nav from './components/Nav';
@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from './components/Login';
 
 import './App.css';
+import SignUp from './components/SignUp';
+import ShowFighter from './components/ShowFighter';
 
 
 function App() {
@@ -32,14 +34,19 @@ function App() {
     //     setUser(null);
     //   }
     
-      if (!user) return <Login onLogin={setUser} />;
+      if (!user) return <Login user= {user} setUser={setUser} onLogin={setUser} />;
+      
 
   return (
     <div className="App">
+      
      <Nav user= {user} setUser={setUser}/>
     <Switch>
         <Route exact path="/fighters"> 
           <FighterContainer user={user} fighters={data} />
+       </Route>
+       <Route exact path="/fighters/:id">
+         <ShowFighter fighters={data}/>
        </Route>
      <Route exact path="/fighters"> 
           <CreateFighter  />
